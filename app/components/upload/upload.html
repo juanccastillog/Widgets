@@ -8,11 +8,11 @@
         <div layout = "row" layout-align = "center center">DATA TRANSFER</div>
         <div class = "w3-display-container">
             <canvas id="doughnut" class="chart chart-doughnut" 
-                    chart-data="[300,500,100,20]" chart-labels="['tres','cinco','cero']" chart-colors="['rgb(0,140,0)','rgb(255,64,0)','rgb(250,250,200)','rgb(230,230,230)']" >
+                    chart-data="vm.chartData" chart-labels="vm.chartLabels" chart-colors="['rgb(0,140,0)','rgb(255,64,0)','rgb(250,250,200)','rgb(230,230,230)']" >
             </canvas>
             <div class="w3-display-middle">
-                <h1>{{vm.audio}}GB</h1> 
-                <h3>{{vm.totalFiles}}files</h3>
+                <h1>{{vm.total}}GB</h1> 
+                <h3>{{vm.totalFiles}} files</h3>
             </div>            
         </div>
     </div>
@@ -24,15 +24,15 @@
     <div layout = "row" layout-align = "space-around center" class = "w3-gray paddingtopbottom">            
         <div layout = "column" layout-align = "center center">
             <span>audio</span>
-            <span class = "w3-xlarge">55%</span>
+            <span class = "w3-xlarge">{{vm.audioRate}}%</span>
         </div>
         <div layout = "column" layout-align = "center center">
-            <span>audio</span>
-            <span class = "w3-xlarge">55%</span>
+            <span>video</span>
+            <span class = "w3-xlarge">{{vm.videoRate}}%</span>
         </div>
         <div layout = "column" layout-align = "center center">
-            <span>audio</span>            
-            <span class = "w3-xlarge">55%</span>
+            <span>photo</span>            
+            <span class = "w3-xlarge">{{vm.photoRate}}%</span>
         </div>            
     </div>
     <div class = "w3-btn w3-blue" ng-click = "vm.simulateUpload($event)">

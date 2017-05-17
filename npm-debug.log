@@ -1,0 +1,101 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'install' ]
+2 info using npm@2.15.5
+3 info using node@v4.4.5
+4 verbose readDependencies loading dependencies from /Users/juancarloscastillogonzalez/Desarrollo/ProdigiousTest/package.json
+5 verbose install where, deps [ '/Users/juancarloscastillogonzalez/Desarrollo/ProdigiousTest',
+5 verbose install   [ 'bower',
+5 verbose install     'http-server',
+5 verbose install     'jasmine-core',
+5 verbose install     'karma',
+5 verbose install     'karma-chrome-launcher',
+5 verbose install     'karma-firefox-launcher',
+5 verbose install     'karma-jasmine',
+5 verbose install     'karma-junit-reporter',
+5 verbose install     'protractor' ] ]
+6 verbose install where, peers [ '/Users/juancarloscastillogonzalez/Desarrollo/ProdigiousTest',
+6 verbose install   [] ]
+7 verbose installManyTop reading for lifecycle /Users/juancarloscastillogonzalez/Desarrollo/ProdigiousTest/package.json
+8 info preinstall angular-seed@0.0.0
+9 verbose installManyTop reading scoped package data from /Users/juancarloscastillogonzalez/Desarrollo/ProdigiousTest/node_modules/bower/package.json
+10 verbose installManyTop reading scoped package data from /Users/juancarloscastillogonzalez/Desarrollo/ProdigiousTest/node_modules/http-server/package.json
+11 verbose installManyTop reading scoped package data from /Users/juancarloscastillogonzalez/Desarrollo/ProdigiousTest/node_modules/jasmine-core/package.json
+12 verbose installManyTop reading scoped package data from /Users/juancarloscastillogonzalez/Desarrollo/ProdigiousTest/node_modules/karma/package.json
+13 verbose installManyTop reading scoped package data from /Users/juancarloscastillogonzalez/Desarrollo/ProdigiousTest/node_modules/karma-chrome-launcher/package.json
+14 verbose installManyTop reading scoped package data from /Users/juancarloscastillogonzalez/Desarrollo/ProdigiousTest/node_modules/karma-firefox-launcher/package.json
+15 verbose installManyTop reading scoped package data from /Users/juancarloscastillogonzalez/Desarrollo/ProdigiousTest/node_modules/karma-jasmine/package.json
+16 verbose installManyTop reading scoped package data from /Users/juancarloscastillogonzalez/Desarrollo/ProdigiousTest/node_modules/karma-junit-reporter/package.json
+17 verbose installManyTop reading scoped package data from /Users/juancarloscastillogonzalez/Desarrollo/ProdigiousTest/node_modules/protractor/package.json
+18 verbose readDependencies loading dependencies from /Users/juancarloscastillogonzalez/Desarrollo/ProdigiousTest/package.json
+19 verbose targetResolver reading package data from /Users/juancarloscastillogonzalez/Desarrollo/ProdigiousTest/node_modules/bower/package.json
+20 verbose targetResolver reading package data from /Users/juancarloscastillogonzalez/Desarrollo/ProdigiousTest/node_modules/http-server/package.json
+21 verbose targetResolver reading package data from /Users/juancarloscastillogonzalez/Desarrollo/ProdigiousTest/node_modules/jasmine-core/package.json
+22 verbose targetResolver reading package data from /Users/juancarloscastillogonzalez/Desarrollo/ProdigiousTest/node_modules/karma/package.json
+23 verbose targetResolver reading package data from /Users/juancarloscastillogonzalez/Desarrollo/ProdigiousTest/node_modules/karma-chrome-launcher/package.json
+24 verbose targetResolver reading package data from /Users/juancarloscastillogonzalez/Desarrollo/ProdigiousTest/node_modules/karma-firefox-launcher/package.json
+25 verbose targetResolver reading package data from /Users/juancarloscastillogonzalez/Desarrollo/ProdigiousTest/node_modules/karma-jasmine/package.json
+26 verbose targetResolver reading package data from /Users/juancarloscastillogonzalez/Desarrollo/ProdigiousTest/node_modules/karma-junit-reporter/package.json
+27 verbose targetResolver reading package data from /Users/juancarloscastillogonzalez/Desarrollo/ProdigiousTest/node_modules/protractor/package.json
+28 verbose targetResolver reading package data from /Users/juancarloscastillogonzalez/Desarrollo/ProdigiousTest/node_modules/.bin/hs/package.json
+29 verbose targetResolver reading package data from /Users/juancarloscastillogonzalez/Desarrollo/ProdigiousTest/node_modules/.bin/http-server/package.json
+30 verbose already installed skipping karma-jasmine@^0.3.8 /Users/juancarloscastillogonzalez/Desarrollo/ProdigiousTest
+31 verbose already installed skipping karma-junit-reporter@^0.4.1 /Users/juancarloscastillogonzalez/Desarrollo/ProdigiousTest
+32 verbose already installed skipping protractor@^4.0.9 /Users/juancarloscastillogonzalez/Desarrollo/ProdigiousTest
+33 verbose already installed skipping bower@^1.7.7 /Users/juancarloscastillogonzalez/Desarrollo/ProdigiousTest
+34 verbose already installed skipping http-server@^0.9.0 /Users/juancarloscastillogonzalez/Desarrollo/ProdigiousTest
+35 verbose already installed skipping jasmine-core@^2.4.1 /Users/juancarloscastillogonzalez/Desarrollo/ProdigiousTest
+36 verbose already installed skipping karma@^0.13.22 /Users/juancarloscastillogonzalez/Desarrollo/ProdigiousTest
+37 verbose already installed skipping karma-chrome-launcher@^0.2.3 /Users/juancarloscastillogonzalez/Desarrollo/ProdigiousTest
+38 verbose already installed skipping karma-firefox-launcher@^0.1.7 /Users/juancarloscastillogonzalez/Desarrollo/ProdigiousTest
+39 silly install resolved []
+40 info build /Users/juancarloscastillogonzalez/Desarrollo/ProdigiousTest
+41 info linkStuff angular-seed@0.0.0
+42 silly linkStuff angular-seed@0.0.0 has /Users/juancarloscastillogonzalez/Desarrollo as its parent node_modules
+43 verbose linkBins angular-seed@0.0.0
+44 verbose linkMans angular-seed@0.0.0
+45 verbose rebuildBundles angular-seed@0.0.0
+46 verbose rebuildBundles [ '.bin',
+46 verbose rebuildBundles   'bower',
+46 verbose rebuildBundles   'http-server',
+46 verbose rebuildBundles   'jasmine-core',
+46 verbose rebuildBundles   'karma',
+46 verbose rebuildBundles   'karma-chrome-launcher',
+46 verbose rebuildBundles   'karma-firefox-launcher',
+46 verbose rebuildBundles   'karma-jasmine',
+46 verbose rebuildBundles   'karma-junit-reporter',
+46 verbose rebuildBundles   'protractor' ]
+47 info install angular-seed@0.0.0
+48 info postinstall angular-seed@0.0.0
+49 verbose unsafe-perm in lifecycle true
+50 info angular-seed@0.0.0 Failed to exec postinstall script
+51 verbose stack Error: angular-seed@0.0.0 postinstall: `bower install`
+51 verbose stack Exit status 1
+51 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:217:16)
+51 verbose stack     at emitTwo (events.js:87:13)
+51 verbose stack     at EventEmitter.emit (events.js:172:7)
+51 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:24:14)
+51 verbose stack     at emitTwo (events.js:87:13)
+51 verbose stack     at ChildProcess.emit (events.js:172:7)
+51 verbose stack     at maybeClose (internal/child_process.js:827:16)
+51 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+52 verbose pkgid angular-seed@0.0.0
+53 verbose cwd /Users/juancarloscastillogonzalez/Desarrollo/ProdigiousTest
+54 error Darwin 16.5.0
+55 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install"
+56 error node v4.4.5
+57 error npm  v2.15.5
+58 error code ELIFECYCLE
+59 error angular-seed@0.0.0 postinstall: `bower install`
+59 error Exit status 1
+60 error Failed at the angular-seed@0.0.0 postinstall script 'bower install'.
+60 error This is most likely a problem with the angular-seed package,
+60 error not with npm itself.
+60 error Tell the author that this fails on your system:
+60 error     bower install
+60 error You can get information on how to open an issue for this project with:
+60 error     npm bugs angular-seed
+60 error Or if that isn't available, you can get their info via:
+60 error
+60 error     npm owner ls angular-seed
+60 error There is likely additional logging output above.
+61 verbose exit [ 1, true ]

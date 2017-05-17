@@ -7,9 +7,9 @@
             .controller('MenuController', MenuController);
 
         MenuController.$inject =
-            ['$mdSidenav', '$state']
+            ['$mdSidenav', '$state', '$scope']
 
-        function MenuController($mdSidenav, $state)
+        function MenuController($mdSidenav, $state, $scope)
         {
             var vm = this;
 
@@ -17,27 +17,37 @@
             vm.goToWelcome = goToWelcome;
             vm.goToUpload = goToUpload;
             vm.goToMessage = goToMessage;
-            
+
+            $scope.$watch
+                (
+                    function ()
+                    {
+                        return $state.current.name;
+                    },
+                    function ()
+                    {
+                        vm.currentState = $state.current.name;
+                    }
+                )
+
             function openClose()
             {
-               $mdSidenav('sidemenu').toggle(); 
+                $mdSidenav('sidemenu').toggle();
             }
             function goToWelcome()
             {
                 $state.go('menu.welcome');
                 openClose();
-                vm.item = "welcome";
             }
             function goToUpload()
             {
                 $state.go('menu.upload');
                 openClose();
-                vm.item = "upload";
             }
             function goToMessage()
             {
-                
-            }            
+
+            }
         }
     }
 )();

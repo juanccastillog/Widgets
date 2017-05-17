@@ -10,13 +10,13 @@
                 <p>PRODIGIOUS TEST</p>
             </div>
             <div>
-                <md-list-item ng-click = "vm.goToWelcome()" class = "pointercursor" ng-class="{selectedinmenu : (vm.item == 'welcome') }">
+                <md-list-item ng-click = "vm.goToWelcome()" class = "pointercursor" ng-class="{selectedinmenu : (vm.currentState == 'menu.welcome') }">
                     <p class = "inmenuitem">Welcome</p>
                 </md-list-item>
-                <md-list-item ng-click = "vm.goToUpload()" class = "pointercursor" ng-class="{selectedinmenu : (vm.item == 'upload') }">
+                <md-list-item ng-click = "vm.goToUpload()" class = "pointercursor" ng-class="{selectedinmenu : (vm.currentState == 'menu.upload') }">
                     <p class = "inmenuitem">Upload Files</p>
                 </md-list-item>
-                <md-list-item ng-click = "vm.goToMessage()" class = "pointercursor" ng-class="{selectedinmenu : (vm.item == 'message') }">
+                <md-list-item ng-click = "vm.goToMessage()" class = "pointercursor" ng-class="{selectedinmenu : (vm.currentState == 'menu.message') }">
                     <p class = "inmenuitem">Send a Message</p>
                 </md-list-item>                 
             </div>            

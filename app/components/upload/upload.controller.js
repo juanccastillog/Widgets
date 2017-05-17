@@ -10,13 +10,12 @@
             ['$mdDialog', 'localStore', 'dataReader']
 
         function UploadController($mdDialog, localStore, dataReader)
-        {
+        {            
             var vm = this;
             vm.simulateUpload = simulateUpload;
             init();
             function init()
             {
-                vm = {audio: 0, video: 0, photo: 0, other: 0, total: 0,totalFiles: 0};
                 if (!(localStore.getItem("audio") == null))
                 {
                     getStoredValues();
@@ -39,7 +38,7 @@
                             fullscreen: true,
                             locals:
                                 {
-                                    data: {audio: vm.audio, video: vm.video}
+                                    data: {audio: vm.audio, video: vm.video, photo: vm.photo, totalFiles: vm.totalFiles}
                                 }
                         }
                     )
@@ -75,6 +74,8 @@
                 vm.videoRate = Math.floor((vm.video / vm.total) * 100);
                 vm.photoRate = Math.floor((vm.photo / vm.total) * 100);
                 vm.otherRate = 100 - vm.audioRate - vm.videoRate - vm.photoRate;
+                vm.chartData = [vm.audio, vm.video, vm.photo, vm.other];
+                vm.chartLabels = ['audio', 'video', 'photo', 'other'];
             }
 
             function storeValues()
