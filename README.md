@@ -6,7 +6,10 @@ Please, go to http://prowidgets.s3-website-sa-east-1.amazonaws.com/#!/welcome to
 
 Please take time to see the app from both mobile devices and desktop browsers, you will see how all the widgets perfectly fit the browser window size.
 
-## 2.1 Menu
+## 2.1. Menu
 
 The menu gives the user access to the other three widgets.  It also allows the user to switch between languages.
   
+## 2.2. Welcome Page
+
+The welcome page reads a json file to get the number of views, messages and loves

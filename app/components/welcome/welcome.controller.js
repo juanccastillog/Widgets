@@ -25,6 +25,7 @@
                     localStore.setItem("nviews", vm.nviews);
                     vm.nmessages = parseInt(localStore.getItem("nmessages"));
                     vm.nloves = parseInt(localStore.getItem("nloves"));
+                    vm.ILoveIt = localStore.getItem("iloveit") || false;
                 }
                 else
                 {
@@ -35,6 +36,7 @@
                         localStore.setItem("nviews", vm.nviews);
                         localStore.setItem("nmessages", vm.nmessages);
                         localStore.setItem("nloves", vm.nloves);
+                        localStore.setItem("iloveit", vm.ILoveIt);
                     }
                     );
                 }
@@ -65,6 +67,7 @@
                     vm.ILoveIt = true;
                     vm.nloves += 1;
                 }
+                localStore.setItem("iloveit", vm.ILoveIt);
             }
 
         }
