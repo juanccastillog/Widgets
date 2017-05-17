@@ -7,18 +7,21 @@
         >
             <div class = "w3-gray w3-text-white" layout="row"  layout-lg = "column" layout-padding>
                 <img src="resources/img/prodigiouslogo.png" class="w3-circle mediumimage" alt="" >
-                <p>PRODIGIOUS TEST</p>
+                <p>{{vm.words.GENERAL_TITLE}}</p>
             </div>
             <div>
                 <md-list-item ng-click = "vm.goToWelcome()" class = "pointercursor" ng-class="{selectedinmenu : (vm.currentState == 'menu.welcome') }">
-                    <p class = "inmenuitem">Welcome</p>
+                    <p class = "inmenuitem">{{vm.words.WELCOME}}</p>
                 </md-list-item>
                 <md-list-item ng-click = "vm.goToUpload()" class = "pointercursor" ng-class="{selectedinmenu : (vm.currentState == 'menu.upload') }">
-                    <p class = "inmenuitem">Upload Files</p>
+                    <p class = "inmenuitem">{{vm.words.UPLOAD_FILES}}</p>
                 </md-list-item>
                 <md-list-item ng-click = "vm.goToMessage()" class = "pointercursor" ng-class="{selectedinmenu : (vm.currentState == 'menu.message') }">
-                    <p class = "inmenuitem">Send a Message</p>
-                </md-list-item>                 
+                    <p class = "inmenuitem">{{vm.words.SEND_MESSAGE}}</p>
+                </md-list-item>
+                <md-list-item ng-click = "vm.switchLanguage()" class = "pointercursor">
+                    <p class = "inmenuitem w3-text-blue">{{vm.words.SWITCH_LANGUAGE}}</p>
+                </md-list-item>                
             </div>            
         
     </md-sidenav>

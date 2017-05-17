@@ -2,40 +2,43 @@
 {
     'use strict';
     angular.
-            module('hojadevida').
-            factory('lectorLocalHojaDeVida', lectorLocalHojaDeVida);
-    lectorLocalHojaDeVida.$inject = ['$resource'];
-    function lectorLocalHojaDeVida($resource)
+            module('prodigious').
+            factory('languageReader', languageReader);
+    languageReader.$inject = ['$resource'];
+    function languageReader($resource)
     {
-        var interfaz;
-        interfaz = {
-            leerhoja: leerhoja,
-            leerpalabras : leerpalabras
-        };
-        return interfaz;
-        
-        function leerhoja(nombreusuario, idioma)
-        {
-            var nombrearchivo = 'recursos/infoHojas/' + nombreusuario + '/'+idioma+'/hojadevida.json';
-            var hojadevidainfo ;
-            return $resource(nombrearchivo).get(traeIdioma);
-            function traeIdioma(data)
-            {
-                hojadevidainfo = data;
-            }
-        }
-        
-        function leerpalabras(idioma)
-        {
-            var nombrearchivo = 'recursos/json' + '/'+idioma+'/palabras.json';
-            var palabras ;
-            return $resource(nombrearchivo).get(traeIdioma2);
-            function traeIdioma2(data)
-            {
-                palabras = data;
-            }            
-        }
+        var interface_;
 
+        interface_ = {
+            setLanguage:setLanguage,
+            getLanguage:getLanguage,
+            getWords:getWords,
+            mLanguage : "en",
+            mWords : {}
+        };
+        return interface_;
+        
+        function setLanguage(language)
+        {            
+            var nombrearchivo = 'resources/languages' + '/'+language+'/words.json';            
+            $resource(nombrearchivo).get(
+                    function (data)
+                    {
+                        interface_.mWords = data;
+                        interface_.mLanguage = language;
+                    }
+                );
+        }        
+        
+        function getLanguage()
+        {
+            return interface_.mLanguage;
+        }
+        
+        function getWords()
+        {
+            return interface_.mWords;
+        }
     }
 
 }

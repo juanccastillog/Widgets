@@ -7,10 +7,10 @@
             .controller('UploadController', UploadController);
 
         UploadController.$inject =
-            ['$mdDialog', 'localStore', 'dataReader']
+            ['$mdDialog', 'localStore', 'dataReader', '$scope', 'languageReader']
 
-        function UploadController($mdDialog, localStore, dataReader)
-        {            
+        function UploadController($mdDialog, localStore, dataReader, $scope, languageReader)
+        {
             var vm = this;
             vm.simulateUpload = simulateUpload;
             init();
@@ -24,6 +24,19 @@
                 {
                     readValues();
                 }
+
+                $scope.$watch
+                    (
+                        function ()
+                        {
+                            return languageReader.getLanguage();
+                        },
+                        function ()
+                        {
+                            vm.words = languageReader.getWords();
+                        }
+                    );
+                vm.words = languageReader.getWords();
             }
             function simulateUpload(event)
             {

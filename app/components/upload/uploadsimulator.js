@@ -6,8 +6,8 @@ function ()
             .module('prodigious')
             .controller('UploadSimulator', UploadSimulator);
 
-    UploadSimulator.$inject = ['data','$mdDialog'];
-    function UploadSimulator(data, $mdDialog)
+    UploadSimulator.$inject = ['data','$mdDialog','$scope','languageReader'];
+    function UploadSimulator(data, $mdDialog,$scope, languageReader)
     {
         var vm;                
         vm = this;                
@@ -19,6 +19,18 @@ function ()
             vm.video = data.video;
             vm.photo = data.photo;
             vm.totalFiles = data.totalFiles;
+            $scope.$watch
+                (
+                    function ()
+                    {
+                        return languageReader.getLanguage();
+                    },
+                    function ()
+                    {
+                        vm.words = languageReader.getWords();
+                    }    
+                );
+            vm.words = languageReader.getWords();
         }
         
         vm.clickClose = clickClose;

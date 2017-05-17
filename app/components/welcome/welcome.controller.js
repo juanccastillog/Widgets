@@ -7,9 +7,9 @@
             .controller('WelcomeController', WelcomeController);
 
         WelcomeController.$inject =
-            ['$mdSidenav', 'dataReader', 'localStore']
+            ['dataReader', 'localStore', '$scope', 'languageReader']
 
-        function WelcomeController($mdSidenav, dataReader, localStore)
+        function WelcomeController(dataReader, localStore, $scope, languageReader)
         {
             var vm = this;
 
@@ -34,10 +34,22 @@
                         vm.nloves = parseInt(data.nloves);
                         localStore.setItem("nviews", vm.nviews);
                         localStore.setItem("nmessages", vm.nmessages);
-                        localStore.setItem("nloves", vm.nloves);                        
+                        localStore.setItem("nloves", vm.nloves);
                     }
                     );
                 }
+                $scope.$watch
+                    (
+                        function ()
+                        {
+                            return languageReader.getLanguage();
+                        },
+                        function ()
+                        {
+                            vm.words = languageReader.getWords();
+                        }
+                    );
+                vm.words = languageReader.getWords();
 
             }
             function toggleLoveIt()

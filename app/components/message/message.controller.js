@@ -7,9 +7,9 @@
             .controller('MessageController', MessageController);
 
         MessageController.$inject =
-            ['localStore', '$timeout']
+            ['localStore', '$timeout', '$scope', 'languageReader']
 
-        function MessageController(localStore, $timeout)
+        function MessageController(localStore, $timeout, $scope, languageReader)
         {
             var vm = this;
             vm.submit = submit;
@@ -27,6 +27,18 @@
                     vm.viewprogress = false;
                     vm.messageSent = false;
                 }
+                $scope.$watch
+                    (
+                        function ()
+                        {
+                            return languageReader.getLanguage();
+                        },
+                        function ()
+                        {
+                            vm.words = languageReader.getWords();
+                        }
+                    )
+                vm.words = languageReader.getWords();
             }
             function submit(event)
             {
@@ -42,8 +54,8 @@
                                     function ()
                                     {
                                         vm.messageSent = false;
-                                    },2000
-                                );
+                                    }, 2000
+                                    );
                         },
                         3000
                         );
