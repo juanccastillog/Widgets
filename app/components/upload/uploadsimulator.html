@@ -1,0 +1,58 @@
+<md-dialog arial-label = "Upload Simulator">
+    <form ng-cloak>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Upload Simulator</h2>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="vista.clickCerrar()">
+                    <md-icon md-svg-src="../../resources/img/cerrar.svg" aria-label="Cerrar"></md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>   
+        <md-dialog-content>
+            <div class="md-dialog-content" layout = "column">
+                <md-input-container class ='md-block'>
+                    <label>
+                        Audios
+                    </label>
+
+                    <input type = "number" ng-model = "vm.audio"/>
+                </md-input-container>   
+                <md-input-container class ='md-block'>
+                    <label>
+                        Videos
+                    </label>
+
+                    <input type = "number" ng-model = "vm.video"/>
+                </md-input-container>   
+                <md-input-container class ='md-block'>
+                    <label>
+                        Photos
+                    </label>
+
+                    <input type = "number" ng-model = "vm.photo"/>
+                </md-input-container>   
+                <md-input-container class ='md-block'>
+                    <label>
+                        Total Files
+                    </label>
+
+                    <input type = "number" ng-model = "vm.totalFiles"/>
+                </md-input-container>                
+            </div>
+        </md-dialog-content>
+        <md-dialog-actions layout="row">
+            <!--            <md-button href="http://en.wikipedia.org/wiki/Mango" target="_blank" md-autofocus>
+                            More on Wikipedia
+                        </md-button>-->
+
+            <md-button ng-click="vm.clickClose()">
+                Cancel
+            </md-button>
+            <!--<span flex></span>-->
+            <md-button ng-click="vm.clickDone()" md-autofocus>
+                Done
+            </md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>

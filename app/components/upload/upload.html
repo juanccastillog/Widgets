@@ -1,0 +1,42 @@
+
+<div layout = "column" class = "w3-white alingddiv">
+    <div layout = "row" class="parentdiv" >
+        <div layout = "row" layout-align = "center center" class = "activetab"><div>Diagram Stats</div></div>
+        <div layout = "row" layout-align = "center center" class = "inactivetab"><div>Month Report</div></div>
+    </div>
+    <div ng-if = "true" layout-margin class = "whitediv" layout = "column">
+        <div layout = "row" layout-align = "center center">DATA TRANSFER</div>
+        <div class = "w3-display-container">
+            <canvas id="doughnut" class="chart chart-doughnut" 
+                    chart-data="[300,500,100,20]" chart-labels="['tres','cinco','cero']" chart-colors="['rgb(0,140,0)','rgb(255,64,0)','rgb(250,250,200)','rgb(230,230,230)']" >
+            </canvas>
+            <div class="w3-display-middle">
+                <h1>{{vm.audio}}GB</h1> 
+                <h3>{{vm.totalFiles}}files</h3>
+            </div>            
+        </div>
+    </div>
+    <div layout = "row">
+        <div class = "greenlinediv" flex></div>
+        <div class = "redlinediv" flex></div>
+        <div class = "yellowlinediv" flex></div>
+    </div>
+    <div layout = "row" layout-align = "space-around center" class = "w3-gray paddingtopbottom">            
+        <div layout = "column" layout-align = "center center">
+            <span>audio</span>
+            <span class = "w3-xlarge">55%</span>
+        </div>
+        <div layout = "column" layout-align = "center center">
+            <span>audio</span>
+            <span class = "w3-xlarge">55%</span>
+        </div>
+        <div layout = "column" layout-align = "center center">
+            <span>audio</span>            
+            <span class = "w3-xlarge">55%</span>
+        </div>            
+    </div>
+    <div class = "w3-btn w3-blue" ng-click = "vm.simulateUpload($event)">
+        Simulate upload
+    </div>    
+</div>
+

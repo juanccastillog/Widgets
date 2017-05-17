@@ -1,0 +1,27 @@
+<div layout = "row" layout-xs ="column" layout-sm ="column" class = "parentdiv">
+    <md-sidenav
+        class = "md-sidenav-left"
+        md-component-id = "sidemenu"
+        md-is-locked-open="$mdMedia('gt-md')"
+        md-whiteframe = "4"
+        >
+            <div class = "w3-gray w3-text-white" layout="row"  layout-lg = "column" layout-padding>
+                <img src="resources/img/prodigiouslogo.png" class="w3-circle mediumimage" alt="" >
+                <p>PRODIGIOUS TEST</p>
+            </div>
+            <div>
+                <md-list-item ng-click = "vm.goToWelcome()" class = "pointercursor" ng-class="{selectedinmenu : (vm.item == 'welcome') }">
+                    <p class = "inmenuitem">Welcome</p>
+                </md-list-item>
+                <md-list-item ng-click = "vm.goToUpload()" class = "pointercursor" ng-class="{selectedinmenu : (vm.item == 'upload') }">
+                    <p class = "inmenuitem">Upload Files</p>
+                </md-list-item>
+                <md-list-item ng-click = "vm.goToMessage()" class = "pointercursor" ng-class="{selectedinmenu : (vm.item == 'message') }">
+                    <p class = "inmenuitem">Send a Message</p>
+                </md-list-item>                 
+            </div>            
+        
+    </md-sidenav>
+    <div ng-click = "vm.openClose()" class = "pointercursor" hide-gt-md><img src="resources/img/menuicon.png" alt="menu"></div>
+    <div ui-view class = "parentdiv"></div>
+</div>

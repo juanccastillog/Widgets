@@ -1,0 +1,28 @@
+<div layout = "column">
+    <img src="resources/img/bird.jpg" alt="bienvenida" class="w3-image w3-round"/> 
+    <div class = "w3-white" layout="row" layout-padding>
+        <img layout = "column" layout-align = "center center" src="resources/img/juanphoto.png" class="w3-circle smallpicture" alt="" />
+        <div layout = "column">
+            <h4>Juan Carlos Castillo González</h4>
+            <p class = "w3-small">Your talent amazes! This is awesome.</p>
+        </div>
+    </div>
+
+    <div layout = "row" layout-padding layout-align = "space-around center" class = "w3-gray w3-round">            
+        <div layout = "row" layout-align = "space-around center">
+            <div class = "pointercursor"><img src = "resources/img/eye.png" class="icon" /></div>
+            <p layout-padding>{{vm.nviews}}</p>
+        </div>
+        <div layout = "row" layout-align = "space-around center">
+            <div><img src = "resources/img/message.ico" class="icon" /></div>
+            <p layout-padding>{{vm.nmessages}}</p>
+        </div>
+        <div layout = "row" layout-align = "space-around center">
+            <div ng-if = "!vm.ILoveIt" class = "pointercursor" ng-click = "vm.toggleLoveIt(vm.ILoveIt)"><img src = "resources/img/emptyheart.png" class="icon" /></div>
+            <div ng-if = "vm.ILoveIt"  class = "pointercursor" ng-click = "vm.toggleLoveIt(vm.ILoveIt)"><img src = "resources/img/filledheart.png" class="icon" /></div>
+            <p layout-padding>{{vm.nloves}}</p>
+        </div>            
+    </div>
+
+
+</div>
