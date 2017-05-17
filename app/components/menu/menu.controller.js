@@ -46,7 +46,8 @@
             }
             function goToMessage()
             {
-
+                $state.go('menu.message');
+                openClose();
             }
         }
     }

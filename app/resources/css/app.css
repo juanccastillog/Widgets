@@ -53,11 +53,18 @@
     background:rgb(230,230,230)
 }
 
-.alingddiv{
-    margin-left: 10px; 
-    margin-top: 10px; 
-    margin-right: 10px; 
-    margin-bottom: 10px;
+.margins{
+    margin: 10px; 
+}
+
+.paddings{
+    padding:40px;
+}
+
+.centeredform{
+    margin-left: auto; 
+    margin-right: auto; 
+    max-width: 400px;
 }
 
 .greenlinediv{
@@ -78,4 +85,9 @@
 .paddingtopbottom{
     padding-top: 20px; 
     padding-bottom: 20px;    
+}
+
+.lightgray
+{
+    background: #f0f0f5
 }

@@ -1,0 +1,31 @@
+<md-progress-linear ng-if = "vm.viewprogress" md-mode="indeterminate" class = "centeredform"></md-progress-linear>
+<form name = "form" ng-submit="vm.submit()" class = "centeredform w3-border w3-white paddings" >       
+    <p ng-if = "vm.messageSent" class = "w3-text-teal">The message has been sent</p>
+    <div class = "md-block">
+        <label>Contacts</label>
+        <tags-input name="contacts" ng-model ="vm.contacts" min-tags="1" placeholder = "Contacts" allowed-tags-pattern = "[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"/></tags-input>
+
+        <div ng-messages="form.contacts.$error" ng-show = "form.contacts.$touched">
+            <div ng-message="allowed-tags-pattern">Not valid email address</div>
+        </div>
+    </div>
+    <br/>
+    <md-input-container class = "md-block">
+        <label>Subject</label>
+        <input type = "number"> 
+    </md-input-container>
+    <md-input-container class = "md-block">
+        <label>Message</label>
+        <textarea></textarea>
+    </md-input-container>
+    <div layout = "row" layout-align = "space-between center" md-theme = "juanTheme">
+        <md-input-container class="md-block">
+            <md-checkbox name="tos" ng-model="vm.saveCopy">
+                Save a copy.
+            </md-checkbox>
+        </md-input-container>
+        <div class = "">
+            <md-button type ="submit" ng-disabled="form.$invalid" class="md-raised md-primary">Send Mail</md-button>
+        </div>
+    </div>
+</form>

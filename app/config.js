@@ -8,9 +8,9 @@
             .constant('states', getStates())
             .config(setup);
 
-        setup.$inject = ['$locationProvider', '$urlRouterProvider', '$stateProvider', 'states'];
+        setup.$inject = ['$locationProvider', '$urlRouterProvider', '$stateProvider', 'states','$mdThemingProvider'];
 
-        function setup($locationProvider, $urlRouterProvider, $stateProvider, states)
+        function setup($locationProvider, $urlRouterProvider, $stateProvider, states, $mdThemingProvider)
         {
             $locationProvider.hashPrefix('!');
             $locationProvider.html5Mode(false);
@@ -26,6 +26,10 @@
             }
             //idiomaServicioProvider.setIdioma('es');
             $urlRouterProvider.otherwise('/welcome');
+            $mdThemingProvider.theme('juanTheme')
+                .primaryPalette('orange')
+                .accentPalette('green')
+                .warnPalette('blue')
         }
 
 
@@ -61,6 +65,16 @@
                                 url: '/upload',
                                 templateUrl: 'components/upload/upload.html',
                                 controller: 'UploadController',
+                                controllerAs: 'vm'
+                            }
+                    },
+                    {
+                        state: 'menu.message',
+                        config:
+                            {
+                                url: '/message',
+                                templateUrl: 'components/message/message.html',
+                                controller: 'MessageController',
                                 controllerAs: 'vm'
                             }
                     }
