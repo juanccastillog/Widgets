@@ -17,14 +17,12 @@
             //$locationProvider.html5Mode({ enabled: true, requireBase: false });
             //$locationProvider.html5Mode(true);
             //$locationProvider.hashPrefix('!');
-            //$locationProvider.html5Mode(true);
-            //$routeProvider.otherwise({redirectTo: '/listaTorneosAConfigurar'}); 
+            //$locationProvider.html5Mode(true); 
             states.forEach(enterState);
             function enterState(state_)
             {
                 $stateProvider.state(state_.state, state_.config);
             }
-            //idiomaServicioProvider.setIdioma('es');
             $urlRouterProvider.otherwise('/welcome');
             $mdThemingProvider.theme('juanTheme')
                 .primaryPalette('orange')

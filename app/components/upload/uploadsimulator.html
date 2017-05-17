@@ -2,35 +2,35 @@
     <form ng-cloak>
         <md-toolbar>
             <div class="md-toolbar-tools">
-                <h2>Upload Simulator</h2>
+                <h2>{{vm.words.UPLOAD_SIMULATOR}}</h2>
             </div>
         </md-toolbar>   
         <md-dialog-content>
             <div class="md-dialog-content" layout = "column">
                 <md-input-container class ='md-block'>
                     <label>
-                        Audio (GB)
+                        {{vm.words.AUDIO}} (GB)
                     </label>
 
                     <input type = "number" ng-model = "vm.audio"/>
                 </md-input-container>   
                 <md-input-container class ='md-block'>
                     <label>
-                        Video (GB)
+                        {{vm.words.VIDEO}} (GB)
                     </label>
 
                     <input type = "number" ng-model = "vm.video"/>
                 </md-input-container>   
                 <md-input-container class ='md-block'>
                     <label>
-                        Photo (GB)
+                        {{vm.words.PHOTO}} (GB)
                     </label>
 
                     <input type = "number" ng-model = "vm.photo"/>
                 </md-input-container>   
                 <md-input-container class ='md-block'>
                     <label>
-                        Total Files
+                        {{vm.words.TOTAL_FILES}}
                     </label>
 
                     <input type = "number" ng-model = "vm.totalFiles"/>
@@ -43,11 +43,11 @@
                         </md-button>-->
 
             <md-button ng-click="vm.clickClose()">
-                Cancel
+                {{vm.words.CANCEL}}
             </md-button>
             <!--<span flex></span>-->
             <md-button ng-click="vm.clickDone()" md-autofocus>
-                Done
+                {{vm.words.DONE}}
             </md-button>
         </md-dialog-actions>
     </form>
